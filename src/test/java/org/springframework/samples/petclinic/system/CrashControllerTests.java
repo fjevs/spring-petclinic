@@ -34,7 +34,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * @author Colin But
  */
 // Waiting https://github.com/spring-projects/spring-boot/issues/5574
-// comments changes trigger VCSCSCS
+// comments
 @Disabled
 @WebMvcTest(controllers = CrashController.class)
 class CrashControllerTests {
