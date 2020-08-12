@@ -58,7 +58,7 @@ project {
         feature {
             id = "amazon-1"
             type = "CloudProfile"
-            param("profileServerUrl", "http://09c8aa8714af.ngrok.io")
+            param("profileServerUrl", "https://09c8aa8714af.ngrok.io")
             param("secure:access-id", "credentialsJSON:ed817984-2548-450a-9084-af3c19691254")
             param("system.cloud.profile_id", "amazon-1")
             param("total-work-time", "")
