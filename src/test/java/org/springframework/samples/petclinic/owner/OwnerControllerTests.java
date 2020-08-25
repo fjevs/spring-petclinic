@@ -68,8 +68,8 @@ class OwnerControllerTests {
 	void setup() {
 		george = new Owner();
 		george.setId(TEST_OWNER_ID);
-		george.setFirstName("George");
-		george.setLastName("Franklin");
+		george.setFirstName("David");
+		george.setLastName("Stewart");
 		george.setAddress("110 W. Liberty St.");
 		george.setCity("Madison");
 		george.setTelephone("6085551023");
@@ -141,9 +141,9 @@ class OwnerControllerTests {
 	void testInitUpdateOwnerForm() throws Exception {
 		mockMvc.perform(get("/owners/{ownerId}/edit", TEST_OWNER_ID)).andExpect(status().isOk())
 				.andExpect(model().attributeExists("owner"))
-				.andExpect(model().attribute("owner", hasProperty("lastName", is("Stewart"))))
-				.andExpect(model().attribute("owner", hasProperty("firstName", is("David"))))
-				.andExpect(model().attribute("owner", hasProperty("address", is("110 W. Main St."))))
+				.andExpect(model().attribute("owner", hasProperty("lastName", is("Franklin"))))
+				.andExpect(model().attribute("owner", hasProperty("firstName", is("George"))))
+				.andExpect(model().attribute("owner", hasProperty("address", is("110 W. Liberty St."))))
 				.andExpect(model().attribute("owner", hasProperty("city", is("Chicago"))))
 				.andExpect(model().attribute("owner", hasProperty("telephone", is("6085551023"))))
 				.andExpect(view().name("owners/createOrUpdateOwnerForm"));
@@ -170,7 +170,7 @@ class OwnerControllerTests {
 	@Test
 	void testShowOwner() throws Exception {
 		mockMvc.perform(get("/owners/{ownerId}", TEST_OWNER_ID)).andExpect(status().isOk())
-				.andExpect(model().attribute("owner", hasProperty("lastName", is("Franklinnn"))))
+				.andExpect(model().attribute("owner", hasProperty("lastName", is("Franklin"))))
 				.andExpect(model().attribute("owner", hasProperty("firstName", is("George"))))
 				.andExpect(model().attribute("owner", hasProperty("address", is("110 W. Liberty St."))))
 				.andExpect(model().attribute("owner", hasProperty("city", is("Madison"))))
