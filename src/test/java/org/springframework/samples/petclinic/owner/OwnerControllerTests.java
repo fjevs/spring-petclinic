@@ -70,8 +70,8 @@ class OwnerControllerTests {
 		george.setId(TEST_OWNER_ID);
 		george.setFirstName("David");
 		george.setLastName("Stewart");
-		george.setAddress("110 W. Liberty St.");
-		george.setCity("Madison");
+		george.setAddress("110 W. Main St.");
+		george.setCity("Chicago");
 		george.setTelephone("6085551023");
 		Pet max = new Pet();
 		PetType dog = new PetType();
